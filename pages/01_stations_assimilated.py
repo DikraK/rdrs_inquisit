@@ -5,7 +5,6 @@ import pandas as pd
 import numpy as np
 import os
 from configparser import ConfigParser
-#import branca
 
 import folium
 from folium.plugins import Draw
@@ -83,14 +82,11 @@ if 2014 <= year_to_look <= 2016 or 1992 <= year_to_look <= 1994 :
     grouped_var['count'][grouped_var['count'] > 365] = 365
     
     # do the map
-    #colormap = branca.colormap.LinearColormap(colors=['magenta', 'green', 'red'], vmin=0, vmax=365)
- 
     m        = folium.Map(location=[45.5, -93.56], zoom_start=2.4)    
     grouped_var.apply(lambda row:folium.Circle(location=[row["LAT"], row["LON"]], 
                                             color='red', fill=True,  fill_opacity=0.2,
                                             radius=30).add_to(m), axis=1)
 
-    #m.add_child(colormap)
     folium.map.LayerControl('topleft', collapsed= False).add_to(m)
     
     folium_static(m)
