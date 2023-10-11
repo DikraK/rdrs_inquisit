@@ -2,19 +2,15 @@
 
 import streamlit as st 
 import pandas as pd
-import plotly.express as px
-from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import numpy as np
 import os
-from datetime import datetime
 from configparser import ConfigParser
 import branca.colormap as cm
 
 import folium
 from folium.plugins import Draw
 from streamlit_folium import folium_static
-import json
 
 #============================ READ CONFIGURATION
 #
