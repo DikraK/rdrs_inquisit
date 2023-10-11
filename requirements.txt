@@ -5,4 +5,3 @@ branca==0.6.0
 streamlit-folium>=0.6.12
 folium==0.12.1.post1
 matplotlib
-streamlit>=1.11.1
