@@ -83,7 +83,7 @@ if 2014 <= year_to_look <= 2016 or 1992 <= year_to_look <= 1994 :
     grouped_var['count'][grouped_var['count'] > 365] = 365
     
     # do the map
-    colormap = brana.colormap.cm.LinearColormap(colors=['magenta', 'green', 'red'], vmin=0, vmax=365)
+    colormap = branca.colormap.LinearColormap(colors=['magenta', 'green', 'red'], vmin=0, vmax=365)
  
     m        = folium.Map(location=[45.5, -93.56], zoom_start=2.4)    
     grouped_var.apply(lambda row:folium.Circle(location=[row["LAT"], row["LON"]], 
